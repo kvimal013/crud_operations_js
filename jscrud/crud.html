@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crud.css">
+    <title>crud operation with local storage </title>
+</head>
+<body onload="readAll()">
+    <div class="container">
+        <div class="form-dontainer">
+            <form class="create-form">
+                <input type="text" class="name" id="name" placeholder="Enter Your Name-">
+                <input type="email" class="email" id="email" placeholder="Enter Your Email-">
+                <button type="button" onclick="add()">Create</button>
+            </form>
+            <form action="" class="update-form">
+                <input type="text" class="id" hidden>
+                <input type="text" class="uname">
+                <input type="email" class="uemail">
+                <button type="button" onclick="update()">Update</button>
+            </form>
+            <div class="add-div">
+                <button onclick="create()" style="margin-top: 20px; background-color: brown; padding:8px 30px;">Add +</button>
+            </div>
+            <table border="1">
+                <thead>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </thead>
+                <tbody class="data-table">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="crud.js"></script>
+</body>
+</html>
